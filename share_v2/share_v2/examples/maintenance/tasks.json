@@ -1,0 +1,34 @@
+{
+  "name": "17项机组检修工序",
+  "time_unit": "day",
+  "cost_unit": "用户未注明，保留原始数值",
+  "resource_capacity": {"crane": 1},
+  "assumptions": [
+    "用户已确认1台吊车、工序不可中断",
+    "工期按固定整数天处理，暂设资源全天可用",
+    "只对表中明确列出的吊车需求建模；空白资源栏不代表实际无需资源",
+    "未建模人员、作业面、班次、空间干涉、准备时间或机组状态约束",
+    "检修成本按每项固定成本处理，币种和单位待明确"
+  ],
+  "known_precedence": [],
+  "procedure_text": "",
+  "tasks": [
+    {"id":"P01","name":"停机排水","duration":2,"cost":0.5,"resources":{}},
+    {"id":"P02","name":"拆解顶盖","duration":1,"cost":1,"resources":{}},
+    {"id":"P03","name":"吊出转轮","duration":1,"cost":0.5,"resources":{"crane":1}},
+    {"id":"P04","name":"转轮检修","duration":4,"cost":3,"resources":{}},
+    {"id":"P05","name":"导叶检修","duration":3,"cost":2,"resources":{}},
+    {"id":"P06","name":"拆解上机架","duration":3,"cost":1,"resources":{}},
+    {"id":"P07","name":"吊出转子","duration":1,"cost":0.5,"resources":{"crane":1}},
+    {"id":"P08","name":"定子检修","duration":5,"cost":3,"resources":{}},
+    {"id":"P09","name":"转子检修","duration":4,"cost":5,"resources":{}},
+    {"id":"P10","name":"推力轴承检修","duration":2,"cost":5,"resources":{}},
+    {"id":"P11","name":"回装转轮","duration":1,"cost":1,"resources":{"crane":1}},
+    {"id":"P12","name":"回装转子","duration":1,"cost":1,"resources":{"crane":1}},
+    {"id":"P13","name":"轴线调整","duration":5,"cost":2,"resources":{}},
+    {"id":"P14","name":"回装上机架","duration":2,"cost":0.5,"resources":{"crane":1}},
+    {"id":"P15","name":"回装顶盖","duration":2,"cost":0.5,"resources":{}},
+    {"id":"P16","name":"盘车检查","duration":1,"cost":1,"resources":{}},
+    {"id":"P17","name":"充水调试","duration":2,"cost":1,"resources":{}}
+  ]
+}

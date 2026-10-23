@@ -1,0 +1,84 @@
+--- upstream/scripts/utils/llms_definitions.py
++++ v2/scripts/utils/llms_definitions.py
+@@ -1,9 +1,7 @@
+ import os
+ from typing import List
+ 
+-import google.generativeai as genai
+ from openai import OpenAI
+-from together import Together
+ 
+ 
+ class GenLLM(object):
+@@ -27,6 +25,7 @@
+ 
+ class GeminiModel(GenLLM):
+     def __init__(self, model_name: str):
++        import google.generativeai as genai
+         super().__init__(model_name)
+         print("Using Gemini model-", model_name)
+         genai.configure(api_key=os.environ.get("GOOGLE_API_KEY"))
+@@ -49,6 +48,7 @@
+ 
+ class TogetherModel(GenLLM):
+     def __init__(self, model_name: str):
++        from together import Together
+         super().__init__(model_name)
+         print("Using Llama model-", model_name)
+         self.model = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
+@@ -92,15 +92,16 @@
+ 
+ 
+ class GPTModel(GenLLM):
+-    def __init__(self, model_name: str):
++    def __init__(self, model_name: str, stream=False, max_retries=2):
+         super().__init__(model_name)
+         print("Using GPT model-", model_name)
+-        self.model = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
++        self.model = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"), max_retries=max_retries)
++        self.stream = stream
+         self.messages = []
+ 
+-    def run_model(self, prompt: str):
++    def run_model(self, prompt: str, on_chunk=None):
+         messages = [{"role": "user", "content": prompt}]
+-        return self.run_gpt(self.model, self.model_name, messages)
++        return self.run_gpt(self.model, self.model_name, messages, stream=self.stream, on_chunk=on_chunk)
+ 
+     def run_model_chat(self, prompt: str):
+         self.messages.append({"role": "user", "content": prompt})
+@@ -109,7 +110,28 @@
+         return response
+ 
+     @staticmethod
+-    def run_gpt(model, mname, messages):
++    def run_gpt(model, mname, messages, stream=False, on_chunk=None):
++        if stream:
++            response = model.chat.completions.create(model=mname, messages=messages, stream=True)
++            pieces = []
++            finish_reason = None
++            try:
++                for chunk in response:
++                    if not chunk.choices:
++                        continue
++                    choice = chunk.choices[0]
++                    content = choice.delta.content
++                    if content:
++                        pieces.append(content)
++                        if on_chunk is not None:
++                            on_chunk(content)
++                    if choice.finish_reason is not None:
++                        finish_reason = choice.finish_reason
++            finally:
++                response.close()
++            if finish_reason != "stop" or not pieces:
++                raise RuntimeError(f"Incomplete streamed response (finish_reason={finish_reason}); partial output preserved")
++            return "".join(pieces)
+         response = model.chat.completions.create(
+             model=mname,
+             messages=messages,
+@@ -120,4 +142,4 @@
+ 
+ 
+     def clear(self):
+-        self.messages = []+        self.messages = []

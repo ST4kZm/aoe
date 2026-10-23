@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "api": "gpt",
+  "model": "gpt-6-sol",
+  "prompt_sha256": "374733735daf445f3876b5bfee183ecf05c1dcf7031741626dafd440c94170e5",
+  "base_url": "https://apinebula.ai/v1"
+}

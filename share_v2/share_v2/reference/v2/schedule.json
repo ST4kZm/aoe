@@ -1,0 +1,418 @@
+{
+  "status": "conditional_candidate_schedule",
+  "relation_schema": 2,
+  "unresolved_pairs": [
+    [
+      "P13",
+      "P15"
+    ],
+    [
+      "P14",
+      "P15"
+    ]
+  ],
+  "unresolved_overlaps": [
+    [
+      "P14",
+      "P15"
+    ]
+  ],
+  "resource_order_assumptions": [],
+  "physical_validity_verified": false,
+  "time_unit": "day",
+  "makespan": 23,
+  "serial_duration": 40,
+  "reduction_percent": 42.5,
+  "fixed_cost": 28.5,
+  "cost_unit": "用户未注明，保留原始数值",
+  "tasks": [
+    {
+      "id": "P01",
+      "name": "停机排水",
+      "duration": 2,
+      "cost": 0.5,
+      "resources": {},
+      "start": 0,
+      "end": 2,
+      "latest_start": 0,
+      "latest_end": 2,
+      "total_float": 0
+    },
+    {
+      "id": "P02",
+      "name": "拆解顶盖",
+      "duration": 1,
+      "cost": 1,
+      "resources": {},
+      "start": 2,
+      "end": 3,
+      "latest_start": 5,
+      "latest_end": 6,
+      "total_float": 3
+    },
+    {
+      "id": "P03",
+      "name": "吊出转轮",
+      "duration": 1,
+      "cost": 0.5,
+      "resources": {
+        "crane": 1
+      },
+      "start": 6,
+      "end": 7,
+      "latest_start": 6,
+      "latest_end": 7,
+      "total_float": 0
+    },
+    {
+      "id": "P04",
+      "name": "转轮检修",
+      "duration": 4,
+      "cost": 3,
+      "resources": {},
+      "start": 7,
+      "end": 11,
+      "latest_start": 7,
+      "latest_end": 11,
+      "total_float": 0
+    },
+    {
+      "id": "P05",
+      "name": "导叶检修",
+      "duration": 3,
+      "cost": 2,
+      "resources": {},
+      "start": 3,
+      "end": 6,
+      "latest_start": 8,
+      "latest_end": 11,
+      "total_float": 5
+    },
+    {
+      "id": "P06",
+      "name": "拆解上机架",
+      "duration": 3,
+      "cost": 1,
+      "resources": {},
+      "start": 2,
+      "end": 5,
+      "latest_start": 2,
+      "latest_end": 5,
+      "total_float": 0
+    },
+    {
+      "id": "P07",
+      "name": "吊出转子",
+      "duration": 1,
+      "cost": 0.5,
+      "resources": {
+        "crane": 1
+      },
+      "start": 5,
+      "end": 6,
+      "latest_start": 5,
+      "latest_end": 6,
+      "total_float": 0
+    },
+    {
+      "id": "P08",
+      "name": "定子检修",
+      "duration": 5,
+      "cost": 3,
+      "resources": {},
+      "start": 6,
+      "end": 11,
+      "latest_start": 7,
+      "latest_end": 12,
+      "total_float": 1
+    },
+    {
+      "id": "P09",
+      "name": "转子检修",
+      "duration": 4,
+      "cost": 5,
+      "resources": {},
+      "start": 6,
+      "end": 10,
+      "latest_start": 8,
+      "latest_end": 12,
+      "total_float": 2
+    },
+    {
+      "id": "P10",
+      "name": "推力轴承检修",
+      "duration": 2,
+      "cost": 5,
+      "resources": {},
+      "start": 6,
+      "end": 8,
+      "latest_start": 10,
+      "latest_end": 12,
+      "total_float": 4
+    },
+    {
+      "id": "P11",
+      "name": "回装转轮",
+      "duration": 1,
+      "cost": 1,
+      "resources": {
+        "crane": 1
+      },
+      "start": 11,
+      "end": 12,
+      "latest_start": 11,
+      "latest_end": 12,
+      "total_float": 0
+    },
+    {
+      "id": "P12",
+      "name": "回装转子",
+      "duration": 1,
+      "cost": 1,
+      "resources": {
+        "crane": 1
+      },
+      "start": 12,
+      "end": 13,
+      "latest_start": 12,
+      "latest_end": 13,
+      "total_float": 0
+    },
+    {
+      "id": "P13",
+      "name": "轴线调整",
+      "duration": 5,
+      "cost": 2,
+      "resources": {},
+      "start": 15,
+      "end": 20,
+      "latest_start": 15,
+      "latest_end": 20,
+      "total_float": 0
+    },
+    {
+      "id": "P14",
+      "name": "回装上机架",
+      "duration": 2,
+      "cost": 0.5,
+      "resources": {
+        "crane": 1
+      },
+      "start": 13,
+      "end": 15,
+      "latest_start": 13,
+      "latest_end": 15,
+      "total_float": 0
+    },
+    {
+      "id": "P15",
+      "name": "回装顶盖",
+      "duration": 2,
+      "cost": 0.5,
+      "resources": {},
+      "start": 12,
+      "end": 14,
+      "latest_start": 18,
+      "latest_end": 20,
+      "total_float": 6
+    },
+    {
+      "id": "P16",
+      "name": "盘车检查",
+      "duration": 1,
+      "cost": 1,
+      "resources": {},
+      "start": 20,
+      "end": 21,
+      "latest_start": 20,
+      "latest_end": 21,
+      "total_float": 0
+    },
+    {
+      "id": "P17",
+      "name": "充水调试",
+      "duration": 2,
+      "cost": 1,
+      "resources": {},
+      "start": 21,
+      "end": 23,
+      "latest_start": 21,
+      "latest_end": 23,
+      "total_float": 0
+    }
+  ],
+  "edges": [
+    [
+      "P01",
+      "P02"
+    ],
+    [
+      "P01",
+      "P06"
+    ],
+    [
+      "P02",
+      "P03"
+    ],
+    [
+      "P02",
+      "P05"
+    ],
+    [
+      "P03",
+      "P04"
+    ],
+    [
+      "P04",
+      "P11"
+    ],
+    [
+      "P05",
+      "P11"
+    ],
+    [
+      "P06",
+      "P07"
+    ],
+    [
+      "P07",
+      "P03"
+    ],
+    [
+      "P07",
+      "P08"
+    ],
+    [
+      "P07",
+      "P09"
+    ],
+    [
+      "P07",
+      "P10"
+    ],
+    [
+      "P08",
+      "P12"
+    ],
+    [
+      "P09",
+      "P12"
+    ],
+    [
+      "P10",
+      "P12"
+    ],
+    [
+      "P11",
+      "P12"
+    ],
+    [
+      "P11",
+      "P15"
+    ],
+    [
+      "P12",
+      "P14"
+    ],
+    [
+      "P13",
+      "P16"
+    ],
+    [
+      "P14",
+      "P13"
+    ],
+    [
+      "P15",
+      "P16"
+    ],
+    [
+      "P16",
+      "P17"
+    ]
+  ],
+  "critical_path": [
+    "P01",
+    "P06",
+    "P07",
+    "P03",
+    "P04",
+    "P11",
+    "P12",
+    "P14",
+    "P13",
+    "P16",
+    "P17"
+  ],
+  "critical_tasks": [
+    "P01",
+    "P03",
+    "P04",
+    "P06",
+    "P07",
+    "P11",
+    "P12",
+    "P13",
+    "P14",
+    "P16",
+    "P17"
+  ],
+  "solver": {
+    "method": "CPM",
+    "resource_feasibility_verified": true,
+    "optimal_for_fixed_dag": true
+  },
+  "construction_solver": {
+    "optimal": true,
+    "physical_frozen_before_resources": true,
+    "stages": [
+      {
+        "stage": "physical_disagreement",
+        "backend": "scipy-highs",
+        "optimal": true,
+        "gap": 0.0,
+        "objective_bound": 25.0,
+        "objective": 25,
+        "objective_constant": 507
+      },
+      {
+        "stage": "physical_sparsity",
+        "backend": "scipy-highs",
+        "optimal": true,
+        "gap": 0.0,
+        "objective_bound": 106.0,
+        "objective": 106,
+        "objective_constant": 0
+      },
+      {
+        "stage": "makespan_fixed_physics",
+        "backend": "scipy-highs",
+        "optimal": true,
+        "gap": 0.0,
+        "objective_bound": 23.0,
+        "objective": 23,
+        "objective_constant": 0
+      },
+      {
+        "stage": "resource_disagreement",
+        "backend": "scipy-highs",
+        "optimal": true,
+        "gap": 0.0,
+        "objective_bound": 1.0,
+        "objective": 1,
+        "objective_constant": 41
+      }
+    ]
+  },
+  "graph_origin": "Execution conditions + four-label votes + frozen physical order + resource orientation",
+  "assumptions": [
+    "用户已确认1台吊车、工序不可中断",
+    "工期按固定整数天处理，暂设资源全天可用",
+    "只对表中明确列出的吊车需求建模；空白资源栏不代表实际无需资源",
+    "未建模人员、作业面、班次、空间干涉、准备时间或机组状态约束",
+    "检修成本按每项固定成本处理，币种和单位待明确",
+    "不建模机坑容量；只采用输入声明的独占资源",
+    "UNKNOWN是弃权，未确定先后不等于已证明独立",
+    "未解决关系下的排程与资源方向仅为候选假设；工艺推断未获得现场验证"
+  ]
+}

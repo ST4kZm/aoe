@@ -1,0 +1,1560 @@
+{
+  "timeline": {
+    "relation_schema": 2,
+    "task_conditions": [
+      {
+        "task": "P01",
+        "preconditions": [
+          "机组具备停机、隔离和排水条件（假设）"
+        ],
+        "postconditions": [
+          "机组已停机排水，具备开展内部拆检的基本条件"
+        ],
+        "uncertainties": [
+          "停机隔离和排水验收要求未提供"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P02",
+        "preconditions": [
+          "P01完成，顶盖所在部位具备安全拆解条件（假设）"
+        ],
+        "postconditions": [
+          "顶盖已拆解，相关通道开放"
+        ],
+        "uncertainties": [
+          "顶盖与上机架拆解是否互相妨碍未确认"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P03",
+        "preconditions": [
+          "P01、P02、P07完成；假设本机型须先吊出转子，再经上方通道吊出转轮；吊车可用"
+        ],
+        "postconditions": [
+          "转轮已吊出，转轮本体和导叶检修所需通道开放"
+        ],
+        "uncertainties": [
+          "转轮实际吊出路径、临时拆卸件和吊装方案未提供"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P04",
+        "preconditions": [
+          "P03完成，转轮已置于可检修状态（假设）"
+        ],
+        "postconditions": [
+          "转轮检修完成，具备回装条件"
+        ],
+        "uncertainties": [
+          "检修和验收范围未提供"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P05",
+        "preconditions": [
+          "P03完成，导叶获得所需检修通道（假设）"
+        ],
+        "postconditions": [
+          "导叶检修完成，具备相关部位封闭条件"
+        ],
+        "uncertainties": [
+          "是否必须吊出转轮才能检修导叶未确认"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P06",
+        "preconditions": [
+          "P01完成，上机架具备安全拆解条件（假设）"
+        ],
+        "postconditions": [
+          "上机架已拆解，转子吊出通道开放"
+        ],
+        "uncertainties": [
+          "与顶盖拆解的实际通道关系未确认；资源栏空白不证明无需吊装设备"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P07",
+        "preconditions": [
+          "P06完成，转子吊出通道开放；吊车可用（假设）"
+        ],
+        "postconditions": [
+          "转子已吊出，定子、转子及推力轴承检修所需状态形成"
+        ],
+        "uncertainties": [
+          "推力轴承是否可在转子吊出前检修未确认"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P08",
+        "preconditions": [
+          "P07完成，定子具备检修通道（假设）"
+        ],
+        "postconditions": [
+          "定子检修完成，具备转子回装条件"
+        ],
+        "uncertainties": [
+          "与其他部位检修的作业面干涉未确认"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P09",
+        "preconditions": [
+          "P07完成，吊出的转子具备检修条件（假设）"
+        ],
+        "postconditions": [
+          "转子检修完成，具备回装条件"
+        ],
+        "uncertainties": [
+          "检修和验收范围未提供"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P10",
+        "preconditions": [
+          "P07完成，推力轴承具备检修通道（假设）"
+        ],
+        "postconditions": [
+          "推力轴承检修完成，具备转子回装条件"
+        ],
+        "uncertainties": [
+          "实际轴承结构及其拆装顺序未提供"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P11",
+        "preconditions": [
+          "P04、P05完成，转轮及其邻近部位具备回装条件；吊车可用（假设）"
+        ],
+        "postconditions": [
+          "转轮已回装，具备随后回装转子的条件"
+        ],
+        "uncertainties": [
+          "导叶检修是否必须在转轮回装前全部验收未确认"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P12",
+        "preconditions": [
+          "P08、P09、P10、P11完成；假设转轮先于转子回装；吊车可用"
+        ],
+        "postconditions": [
+          "转子已回装，具备上机架回装条件"
+        ],
+        "uncertainties": [
+          "转轮与转子的实际回装先后及中间装配步骤未提供"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P13",
+        "preconditions": [
+          "P14完成，上机架提供轴系调整所需支承（假设）"
+        ],
+        "postconditions": [
+          "轴线调整完成，具备盘车检查条件"
+        ],
+        "uncertainties": [
+          "轴线调整是否要求顶盖先回装未确认"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P14",
+        "preconditions": [
+          "P12完成，转子已回装；吊车可用（假设）"
+        ],
+        "postconditions": [
+          "上机架已回装，形成轴线调整所需支承"
+        ],
+        "uncertainties": [
+          "轴线调整与上机架回装的实际分步工艺未提供"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P15",
+        "preconditions": [
+          "P11完成，转轮已回装且顶盖相关部位具备封闭条件（假设）"
+        ],
+        "postconditions": [
+          "顶盖已回装，具备最终封闭检查条件"
+        ],
+        "uncertainties": [
+          "顶盖回装与转子回装、轴线调整之间是否存在额外先后要求未确认"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P16",
+        "preconditions": [
+          "P13、P15完成，轴系已调整且顶盖已回装（假设）"
+        ],
+        "postconditions": [
+          "盘车检查完成，具备充水调试条件"
+        ],
+        "uncertainties": [
+          "其他封闭、验收项目是否包含在既有工序内未确认"
+        ],
+        "basis": "hypothesis"
+      },
+      {
+        "task": "P17",
+        "preconditions": [
+          "P16完成，且充水前安全检查合格（假设）"
+        ],
+        "postconditions": [
+          "充水调试完成"
+        ],
+        "uncertainties": [
+          "充水许可和调试验收标准未提供"
+        ],
+        "basis": "hypothesis"
+      }
+    ],
+    "summary": "procedure_text为空，known_precedence为空；以下工艺边均为基于立式机组、转轮从上方吊出的假设，不是已确认规程。先停机排水，再形成拆检通道；转子吊出后，定子、转子、推力轴承检修可作为候选分支，转轮吊出后开展转轮和导叶检修。回装转子须汇合转轮回装及发电机侧检修；盘车须汇合轴线调整与顶盖回装。阶段不构成额外同步屏障。表内唯一已声明独占资源为一台吊车；按所假设路径，其使用顺序为P07→P03→P11→P12→P14。P06等资源栏空白的工序不擅自补报吊车。实际吊出路径、临时准备作业和作业面干涉须经机型资料核实；不考虑机坑容量，也不以工期或编号建立依赖。",
+    "stages": [
+      {
+        "id": "S1",
+        "tasks": [
+          "P01"
+        ],
+        "description": "停机排水，形成拆检的基本状态。"
+      },
+      {
+        "id": "S2",
+        "tasks": [
+          "P02",
+          "P06"
+        ],
+        "description": "顶盖、上机架拆解为候选分支；两者相互关系尚不能确认，不以本阶段要求同步完成。"
+      },
+      {
+        "id": "S3",
+        "tasks": [
+          "P07"
+        ],
+        "description": "上机架拆解后吊出转子，开放发电机侧检修及假设的转轮上方吊出通道；占用吊车。"
+      },
+      {
+        "id": "S4",
+        "tasks": [
+          "P03",
+          "P08",
+          "P09",
+          "P10"
+        ],
+        "description": "转轮吊出须汇合顶盖拆解和转子吊出，并占用吊车；转子吊出后，三项发电机侧检修为候选并行分支，无须等待转轮吊出。"
+      },
+      {
+        "id": "S5",
+        "tasks": [
+          "P04",
+          "P05"
+        ],
+        "description": "转轮吊出后的转轮、导叶检修为候选并行分支；两项完成后汇合至转轮回装。发电机侧检修可跨阶段继续。"
+      },
+      {
+        "id": "S6",
+        "tasks": [
+          "P11"
+        ],
+        "description": "回装转轮，占用吊车；不强制等待三项发电机侧检修完成。"
+      },
+      {
+        "id": "S7",
+        "tasks": [
+          "P12",
+          "P15"
+        ],
+        "description": "转子回装须汇合转轮回装及定子、转子、推力轴承检修，并占用吊车；顶盖回装在转轮回装后可作为另一候选分支，二者实际干涉待核实。"
+      },
+      {
+        "id": "S8",
+        "tasks": [
+          "P14"
+        ],
+        "description": "转子回装后回装上机架，占用吊车；不因阶段划分而强制等待顶盖回装。"
+      },
+      {
+        "id": "S9",
+        "tasks": [
+          "P13"
+        ],
+        "description": "上机架回装后调整轴线；与顶盖回装的额外关系待核实。"
+      },
+      {
+        "id": "S10",
+        "tasks": [
+          "P16"
+        ],
+        "description": "轴线调整与顶盖回装在此汇合，随后盘车检查。"
+      },
+      {
+        "id": "S11",
+        "tasks": [
+          "P17"
+        ],
+        "description": "盘车检查完成并满足充水安全条件后，充水调试。"
+      }
+    ]
+  },
+  "pairs": [
+    {
+      "source": "P01",
+      "target": "P02",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设停机排水后才能安全拆解顶盖。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P03",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经P02、P07等拆解路径，停机排水先于转轮吊出。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P04",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮吊出路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P05",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设导叶检修在转轮吊出后；经该路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P06",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设停机排水后才能安全拆解上机架。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P07",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经上机架拆解路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P08",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子吊出路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P09",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子吊出路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P10",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经假设的转子吊出后检修轴承路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P11",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮拆检路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P12",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经拆检及回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P13",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装转子、上机架路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P14",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装转子路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P15",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经轴线调整及顶盖回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P01",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P03",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设拆解顶盖是从上方吊出转轮的通道条件。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P04",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮吊出路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P05",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经假设的转轮吊出、导叶检修路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P06",
+      "physical_relation": "UNKNOWN",
+      "basis": "unknown",
+      "evidence": "缺少顶盖和上机架的结构、拆解通道资料，不能确认必有先后或物理互不依赖。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P07",
+      "physical_relation": "UNKNOWN",
+      "basis": "unknown",
+      "evidence": "缺少顶盖是否妨碍转子吊出的通道资料；不能仅因P07的已假设前置项为P06就认定二者独立。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P08",
+      "physical_relation": "UNKNOWN",
+      "basis": "unknown",
+      "evidence": "顶盖拆解与定子检修的通道、作业面关系未提供。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P09",
+      "physical_relation": "UNKNOWN",
+      "basis": "unknown",
+      "evidence": "顶盖拆解与吊出后的转子检修是否存在作业面约束未提供。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P10",
+      "physical_relation": "UNKNOWN",
+      "basis": "unknown",
+      "evidence": "顶盖拆解与推力轴承检修的实际通道关系未提供。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P11",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮吊出及检修路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P12",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮吊出、检修、回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P13",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮及转子回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P14",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮及转子回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P15",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "顶盖须先拆解，并在转轮回装后回装。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经顶盖回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P02",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经顶盖回装、盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P03",
+      "target": "P04",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设转轮吊出后才能开展所列转轮检修。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P03",
+      "target": "P05",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设吊出转轮形成导叶检修所需通道；需核实。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P03",
+      "target": "P06",
+      "physical_relation": "AFTER",
+      "basis": "hypothesis",
+      "evidence": "假设上机架拆解、转子吊出后，才能从上方吊出转轮。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P03",
+      "target": "P07",
+      "physical_relation": "AFTER",
+      "basis": "hypothesis",
+      "evidence": "假设转子占据转轮的上方吊出路径。",
+      "resource_conflicts": [
+        "crane"
+      ],
+      "resource_order": "AFTER"
+    },
+    {
+      "source": "P03",
+      "target": "P08",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设转轮吊装通道与转子吊出后的定子检修互不构成工艺前置；作业面仍待核实。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P03",
+      "target": "P09",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设已吊出的转子可另行检修，不以转轮吊出为条件。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P03",
+      "target": "P10",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设转子吊出后可检修推力轴承，转轮吊出不是其工艺条件。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P03",
+      "target": "P11",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "转轮须先吊出并检修，随后回装。",
+      "resource_conflicts": [
+        "crane"
+      ],
+      "resource_order": "BEFORE"
+    },
+    {
+      "source": "P03",
+      "target": "P12",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮检修、回装路径传递；假设转轮先于转子回装。",
+      "resource_conflicts": [
+        "crane"
+      ],
+      "resource_order": "BEFORE"
+    },
+    {
+      "source": "P03",
+      "target": "P13",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮、转子和上机架回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P03",
+      "target": "P14",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮及转子回装路径传递。",
+      "resource_conflicts": [
+        "crane"
+      ],
+      "resource_order": "BEFORE"
+    },
+    {
+      "source": "P03",
+      "target": "P15",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设转轮吊出、检修并回装后才能回装顶盖。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P03",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装及检查准备路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P03",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装、盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P04",
+      "target": "P05",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设吊出转轮后，本体与导叶可分别检修；二者均在回装转轮前汇合。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P04",
+      "target": "P06",
+      "physical_relation": "AFTER",
+      "basis": "hypothesis",
+      "evidence": "经上机架拆解、转子及转轮吊出路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P04",
+      "target": "P07",
+      "physical_relation": "AFTER",
+      "basis": "hypothesis",
+      "evidence": "经转子、转轮吊出路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P04",
+      "target": "P08",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设吊出后的转轮与定子可分别检修，并在转子回装前汇合。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P04",
+      "target": "P09",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设吊出后的转轮和转子可分别检修。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P04",
+      "target": "P10",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设转轮本体与推力轴承检修没有相互工艺前置。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P04",
+      "target": "P11",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "转轮检修完成后方可回装该转轮。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P04",
+      "target": "P12",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P04",
+      "target": "P13",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮、转子和上机架回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P04",
+      "target": "P14",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮、转子回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P04",
+      "target": "P15",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P04",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装、盘车准备路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P04",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装及盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P05",
+      "target": "P06",
+      "physical_relation": "AFTER",
+      "basis": "hypothesis",
+      "evidence": "经上机架拆解、转子及转轮吊出路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P05",
+      "target": "P07",
+      "physical_relation": "AFTER",
+      "basis": "hypothesis",
+      "evidence": "经转子、转轮吊出路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P05",
+      "target": "P08",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设导叶与定子检修没有相互工艺前置；现场干涉待核实。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P05",
+      "target": "P09",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设导叶与吊出的转子可分别检修。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P05",
+      "target": "P10",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设导叶与推力轴承检修没有相互工艺前置。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P05",
+      "target": "P11",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设导叶检修完成后方可回装相邻的转轮。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P05",
+      "target": "P12",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P05",
+      "target": "P13",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮、转子和上机架回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P05",
+      "target": "P14",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转轮、转子回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P05",
+      "target": "P15",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设导叶检修完成并回装转轮后，才能封闭顶盖。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P05",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装、盘车准备路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P05",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装及盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P06",
+      "target": "P07",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设上机架须拆解，才能吊出转子。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P06",
+      "target": "P08",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子吊出路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P06",
+      "target": "P09",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子吊出路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P06",
+      "target": "P10",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经假设的转子吊出、轴承检修路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P06",
+      "target": "P11",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子、转轮吊出及转轮检修路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P06",
+      "target": "P12",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "上机架拆解、转子吊出及检修先于转子回装。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P06",
+      "target": "P13",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子和上机架回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P06",
+      "target": "P14",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "上机架先拆解，且转子回装后才回装上机架。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P06",
+      "target": "P15",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子、转轮吊出和转轮回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P06",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经上机架回装、轴线调整路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P06",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装和盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P07",
+      "target": "P08",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设转子吊出后才形成定子检修通道。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P07",
+      "target": "P09",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设吊出的转子随后进行所列检修。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P07",
+      "target": "P10",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设转子吊出后才形成推力轴承检修条件；结构待核实。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P07",
+      "target": "P11",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经假设的转轮吊出、检修路径传递。",
+      "resource_conflicts": [
+        "crane"
+      ],
+      "resource_order": "BEFORE"
+    },
+    {
+      "source": "P07",
+      "target": "P12",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "转子须先吊出并完成相关检修，随后回装。",
+      "resource_conflicts": [
+        "crane"
+      ],
+      "resource_order": "BEFORE"
+    },
+    {
+      "source": "P07",
+      "target": "P13",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子及上机架回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P07",
+      "target": "P14",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子回装路径传递。",
+      "resource_conflicts": [
+        "crane"
+      ],
+      "resource_order": "BEFORE"
+    },
+    {
+      "source": "P07",
+      "target": "P15",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经假设的转轮吊出及回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P07",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装、轴线调整路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P07",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装及盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P08",
+      "target": "P09",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设转子吊出后，定子与吊出的转子可分别检修；均须在转子回装前完成。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P08",
+      "target": "P10",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设定子与推力轴承检修没有相互工艺前置；干涉待核实。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P08",
+      "target": "P11",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设定子检修不以转轮回装为条件，转轮回装也不以定子检修为条件；均在转子回装前汇合。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P08",
+      "target": "P12",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设定子检修完成后方可回装转子。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P08",
+      "target": "P13",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子、上机架回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P08",
+      "target": "P14",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P08",
+      "target": "P15",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设定子检修与顶盖回装没有相互工艺前置；现场作业面待核实。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P08",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子回装、轴线调整路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P08",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装及盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P09",
+      "target": "P10",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设吊出的转子与推力轴承可分别检修；均在转子回装前完成。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P09",
+      "target": "P11",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设转子检修和转轮回装没有相互工艺前置，二者在转子回装前汇合。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P09",
+      "target": "P12",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "转子检修完成后方可回装该转子。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P09",
+      "target": "P13",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子、上机架回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P09",
+      "target": "P14",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P09",
+      "target": "P15",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设吊出的转子检修与顶盖回装没有相互工艺前置。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P09",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子回装、轴线调整路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P09",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装及盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P10",
+      "target": "P11",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设推力轴承检修与转轮回装没有相互工艺前置，二者在转子回装前汇合。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P10",
+      "target": "P12",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设推力轴承检修完成后方可回装转子。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P10",
+      "target": "P13",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子、上机架回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P10",
+      "target": "P14",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P10",
+      "target": "P15",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设推力轴承检修与顶盖回装没有相互工艺前置；通道待核实。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P10",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子回装、轴线调整路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P10",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装及盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P11",
+      "target": "P12",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设上方吊装路径要求先回装转轮，再回装转子。",
+      "resource_conflicts": [
+        "crane"
+      ],
+      "resource_order": "BEFORE"
+    },
+    {
+      "source": "P11",
+      "target": "P13",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子、上机架回装路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P11",
+      "target": "P14",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子回装路径传递。",
+      "resource_conflicts": [
+        "crane"
+      ],
+      "resource_order": "BEFORE"
+    },
+    {
+      "source": "P11",
+      "target": "P15",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设转轮回装后才能回装顶盖。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P11",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经转子回装及轴线调整等路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P11",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经回装、盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P12",
+      "target": "P13",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设转子及上机架回装后才能进行所列轴线调整。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P12",
+      "target": "P14",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设先将转子回装至机内，再回装上机架。",
+      "resource_conflicts": [
+        "crane"
+      ],
+      "resource_order": "BEFORE"
+    },
+    {
+      "source": "P12",
+      "target": "P15",
+      "physical_relation": "INDEPENDENT",
+      "basis": "hypothesis",
+      "evidence": "假设转子与顶盖回装可分属不同装配分支；实际通道干涉须核实。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P12",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经上机架回装、轴线调整路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P12",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经轴线调整及盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P13",
+      "target": "P14",
+      "physical_relation": "AFTER",
+      "basis": "hypothesis",
+      "evidence": "假设上机架先形成轴系支承，再完成所列轴线调整。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P13",
+      "target": "P15",
+      "physical_relation": "UNKNOWN",
+      "basis": "unknown",
+      "evidence": "缺少轴线调整是否要求顶盖已回装、以及顶盖回装是否影响调整结果的资料，不能确认先后或互不依赖。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P13",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设完成轴线调整后才能以盘车检查调整结果。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P13",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P14",
+      "target": "P15",
+      "physical_relation": "UNKNOWN",
+      "basis": "unknown",
+      "evidence": "上机架与顶盖回装的实际装配通道和干涉资料缺失，不能确认先后或物理互不依赖。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P14",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设上机架回装后进行轴线调整，再盘车检查。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P14",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经轴线调整和盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P15",
+      "target": "P16",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设顶盖回装完成是最终盘车检查前的装配条件。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P15",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "经盘车检查路径传递。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    },
+    {
+      "source": "P16",
+      "target": "P17",
+      "physical_relation": "BEFORE",
+      "basis": "hypothesis",
+      "evidence": "假设盘车检查合格后才能充水调试。",
+      "resource_conflicts": [],
+      "resource_order": "NONE"
+    }
+  ]
+}
