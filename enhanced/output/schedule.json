@@ -1,0 +1,267 @@
+{
+  "project_name": "17项机组检修工序",
+  "time_unit": "day",
+  "cost_unit": "用户未注明，保留原始数值",
+  "makespan": 23,
+  "resource_capacity": {
+    "crane": 1
+  },
+  "scheduling_method": "non-preemptive resource-constrained list scheduling; ready tasks are started in parallel when feasible; priority is descending remaining precedence-path duration, then task name. Cost is excluded from scheduling priority. This is a heuristic feasible schedule, not a proof of global optimality.",
+  "topological_order": [
+    "P01",
+    "P06",
+    "P07",
+    "P02",
+    "P03",
+    "P08",
+    "P04",
+    "P05",
+    "P09",
+    "P10",
+    "P11",
+    "P12",
+    "P14",
+    "P13",
+    "P15",
+    "P16",
+    "P17"
+  ],
+  "tasks": [
+    {
+      "id": "P01",
+      "name": "停机排水",
+      "duration": 2,
+      "cost": 0.5,
+      "start": 0,
+      "finish": 2,
+      "resources": {},
+      "predecessors": [],
+      "priority_remaining_path": 23
+    },
+    {
+      "id": "P06",
+      "name": "拆解上机架",
+      "duration": 3,
+      "cost": 1,
+      "start": 2,
+      "finish": 5,
+      "resources": {},
+      "predecessors": [
+        "P01"
+      ],
+      "priority_remaining_path": 21
+    },
+    {
+      "id": "P02",
+      "name": "拆解顶盖",
+      "duration": 1,
+      "cost": 1,
+      "start": 2,
+      "finish": 3,
+      "resources": {},
+      "predecessors": [
+        "P01"
+      ],
+      "priority_remaining_path": 18
+    },
+    {
+      "id": "P05",
+      "name": "导叶检修",
+      "duration": 3,
+      "cost": 2,
+      "start": 3,
+      "finish": 6,
+      "resources": {},
+      "predecessors": [
+        "P02"
+      ],
+      "priority_remaining_path": 15
+    },
+    {
+      "id": "P07",
+      "name": "吊出转子",
+      "duration": 1,
+      "cost": 0.5,
+      "start": 5,
+      "finish": 6,
+      "resources": {
+        "crane": 1
+      },
+      "predecessors": [
+        "P06"
+      ],
+      "priority_remaining_path": 18
+    },
+    {
+      "id": "P03",
+      "name": "吊出转轮",
+      "duration": 1,
+      "cost": 0.5,
+      "start": 6,
+      "finish": 7,
+      "resources": {
+        "crane": 1
+      },
+      "predecessors": [
+        "P07",
+        "P02"
+      ],
+      "priority_remaining_path": 17
+    },
+    {
+      "id": "P08",
+      "name": "定子检修",
+      "duration": 5,
+      "cost": 3,
+      "start": 6,
+      "finish": 11,
+      "resources": {},
+      "predecessors": [
+        "P07"
+      ],
+      "priority_remaining_path": 16
+    },
+    {
+      "id": "P09",
+      "name": "转子检修",
+      "duration": 4,
+      "cost": 5,
+      "start": 6,
+      "finish": 10,
+      "resources": {},
+      "predecessors": [
+        "P07"
+      ],
+      "priority_remaining_path": 15
+    },
+    {
+      "id": "P10",
+      "name": "推力轴承检修",
+      "duration": 2,
+      "cost": 5,
+      "start": 6,
+      "finish": 8,
+      "resources": {},
+      "predecessors": [
+        "P07"
+      ],
+      "priority_remaining_path": 13
+    },
+    {
+      "id": "P04",
+      "name": "转轮检修",
+      "duration": 4,
+      "cost": 3,
+      "start": 7,
+      "finish": 11,
+      "resources": {},
+      "predecessors": [
+        "P03"
+      ],
+      "priority_remaining_path": 16
+    },
+    {
+      "id": "P11",
+      "name": "回装转轮",
+      "duration": 1,
+      "cost": 1,
+      "start": 11,
+      "finish": 12,
+      "resources": {
+        "crane": 1
+      },
+      "predecessors": [
+        "P05",
+        "P04"
+      ],
+      "priority_remaining_path": 12
+    },
+    {
+      "id": "P12",
+      "name": "回装转子",
+      "duration": 1,
+      "cost": 1,
+      "start": 12,
+      "finish": 13,
+      "resources": {
+        "crane": 1
+      },
+      "predecessors": [
+        "P11",
+        "P08",
+        "P10",
+        "P09"
+      ],
+      "priority_remaining_path": 11
+    },
+    {
+      "id": "P15",
+      "name": "回装顶盖",
+      "duration": 2,
+      "cost": 0.5,
+      "start": 12,
+      "finish": 14,
+      "resources": {},
+      "predecessors": [
+        "P11"
+      ],
+      "priority_remaining_path": 5
+    },
+    {
+      "id": "P14",
+      "name": "回装上机架",
+      "duration": 2,
+      "cost": 0.5,
+      "start": 13,
+      "finish": 15,
+      "resources": {
+        "crane": 1
+      },
+      "predecessors": [
+        "P12"
+      ],
+      "priority_remaining_path": 10
+    },
+    {
+      "id": "P13",
+      "name": "轴线调整",
+      "duration": 5,
+      "cost": 2,
+      "start": 15,
+      "finish": 20,
+      "resources": {},
+      "predecessors": [
+        "P14"
+      ],
+      "priority_remaining_path": 8
+    },
+    {
+      "id": "P16",
+      "name": "盘车检查",
+      "duration": 1,
+      "cost": 1,
+      "start": 20,
+      "finish": 21,
+      "resources": {},
+      "predecessors": [
+        "P15",
+        "P13"
+      ],
+      "priority_remaining_path": 3
+    },
+    {
+      "id": "P17",
+      "name": "充水调试",
+      "duration": 2,
+      "cost": 1,
+      "start": 21,
+      "finish": 23,
+      "resources": {},
+      "predecessors": [
+        "P16"
+      ],
+      "priority_remaining_path": 2
+    }
+  ],
+  "warnings": []
+}
